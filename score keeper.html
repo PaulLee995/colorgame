@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Score keeper</title>
+    <style>
+      form {
+        display: inline;
+      }
+
+      .green {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><span id="p1score">0</span> to <span id="p2score">0</span></h1>
+    <p>Playing to: <span id="playingTo">Select value</span></p>
+
+    <form><input type="number" id="input"></form>
+    <button id="p1btn">Player One</button>
+    <button id="p2btn">Player Two</button>
+    <button id="reset">Reset</button>
+    <script src="scoreKeeper.js" charset="utf-8"></script>
+  </body>
+</html>

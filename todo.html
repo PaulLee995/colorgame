@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo</title>
+</head>
+<body>
+	<h1>Todo List</h1>
+	<ul>
+	<li>new - new todo</li>
+	<li>list - list todos</li>
+	<li>delete - delete todo</li>
+	<li>quit - quit app</li>
+	</ul>
+<script type="text/javascript">
+	var todos = ["some default todo"];
+	var val = prompt("Enter your action: ");
+
+	while (val !== "quit") {
+		val = prompt("Enter your action: ");
+
+		if (val === "new") {
+			var newItem = prompt("Enter new item: ")
+		todos.push(newItem);
+	} else if (val === "list") {
+		for (var i = 0; i < todos.length; i++) {
+			console.log(i + " : " + todos[i]);
+		}
+	} else if (val === "delete") {
+		var index = prompt("Select index: ");
+		todos.splice(Number(index), 1);
+	}
+	}
+
+	
+</script>
+</body>
+</html>

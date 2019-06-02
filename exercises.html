@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercises</title>
+</head>
+<body>
+<script type="text/javascript">
+	// var firstName = prompt("First name: ");
+	// var lastName = prompt("Last name: ");
+	// var age = prompt("Age: ");
+	// console.log("Full name is " + firstName + " " + lastName);
+	// console.log("Age is " + age);
+
+	// var age = prompt("Enter your age: ");
+	// var days = age * 365;
+	// alert(age + " years is roughly " + days + " days");
+
+	// var age = Number(prompt("Enter your age: "));
+	// if(age % Math.sqrt(age) === 0) {
+	// 	alert("your age is a perfect square");
+
+	// }
+
+	// if (age < 0) {
+	// 	alert("Error");
+	// } else if(age === 21) {
+	// 	alert("happy 21st birthday!!");
+	// } else if(age % 2 !== 0) {
+	// 	alert("your age is odd");
+	// }
+
+	// var user = prompt("Are we there yet?");
+	// while (user !== "yes") {
+	// 	var user = prompt("Are we there yet?");
+	// }
+	// alert("Yay, we finally made it!");
+
+	function isEven(num) {
+		if (num % 2 === 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	// alert(isEven(15));
+
+	function factorial(num1) {
+		var res = 1;
+		if (num1 == 0) {
+			return 1;
+		} else {
+			for (var i = 1; i <= num1; i++) {
+				res *= i;
+			}
+			return res;
+		}
+	}
+
+	// alert(factorial(10));
+
+	function printReverse(arr) {
+		for (var i = arr.length - 1; i >= 0; i--) {
+			console.log(arr[i]);
+		}
+	}
+
+	printReverse(["a", "b", "c"]);
+
+	function isUniform(arr) {
+		var val;
+		for (var i = 1; i < arr.length; i++) {
+			if (arr[0] === arr[i]) {
+				val = true
+			} else {
+				val = false;
+			}
+		}
+		return val;
+	}
+
+	console.log(isUniform([1,1,1,1,2]));
+
+	// function sumArray(arr) {
+	// 	var sum = 0;
+	// 	for (var i = 0; i < arr.length; i++) {
+	// 		sum += arr[i];
+	// 	}
+	// 	return sum;
+	// }
+
+	// console.log(sumArray([1,2,3,4,5,-5]));
+
+	function max(arr) {
+		var max = arr[0];
+		for (var i = 1; i < arr.length; i++) {
+			if (max < arr[i]) {
+				max = arr[i];
+			}
+		}
+		return max;
+	}
+
+	console.log(max([1,2,101,5,3,1]));
+
+	// objects exercises
+
+	var someObject = {
+		friends: [
+			{name: "Malfoy"},
+			{name: "Crabble"},
+			{name: "Goyle"}
+		],
+		color: "baby blue",
+		isEvil: true
+	};
+
+	console.log(someObject.friends[0].name);
+</script>
+</body>
+</html>

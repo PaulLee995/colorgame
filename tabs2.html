@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tabs 2</title>
+	<style type="text/css">
+		.button {
+			display: inline;
+			border: 1px solid black;
+			padding: 10px;
+			cursor: pointer;
+		}
+
+		.container {
+			border: 1px solid black;
+			width: 201px;
+			margin-top: 10px;
+		}
+
+		.hide {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="button" id="gb">London</div>
+	<div class="button" id="fr">Paris</div>
+	<div class="button" id="sp">Madrid</div>
+
+	<div class="container">
+	<div class="content" id="london">London is the capital of GB</div>
+	<div class="content hide" id="paris">Paris is the capital of France</div>
+	<div class="content hide" id="madrid">Madrid is the capital of Spain</div>
+	</div>
+
+	<script type="text/javascript">
+		var gb = document.getElementById("gb");
+		var fr = document.getElementById("fr");
+		var sp = document.getElementById("sp");
+
+		var london = document.getElementById("london");
+		var paris = document.getElementById("paris");
+		var madrid = document.getElementById("madrid");
+
+		fr.addEventListener("click", function() {
+			paris.style.display = "inline";
+			madrid.style.display = "none";
+			london.style.display = "none";
+		})
+
+		gb.addEventListener("click", function() {
+			paris.style.display = "none";
+			madrid.style.display = "none";
+			london.style.display = "inline";
+		})
+
+		sp.addEventListener("click", function() {
+			paris.style.display = "none";
+			madrid.style.display = "inline";
+			london.style.display = "none";
+		})
+	</script>
+</body>
+</html>

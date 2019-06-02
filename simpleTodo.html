@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple todo</title>
+	<style type="text/css">
+		.green {
+			color: green;
+		}
+
+		.done {
+			text-decoration: line-through;
+			color: grey;
+		}
+
+		li {
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>Some todo</li>
+		<li>Some todo</li>
+		<li>Some todo</li>
+	</ul>
+<script type="text/javascript">
+	let lis = document.querySelectorAll("li");
+
+	for (let i = 0; i < lis.length; i++) {
+		lis[i].addEventListener("mouseover", function() {
+			this.classList.add("green");
+		});
+
+		lis[i].addEventListener("mouseout", function() {
+			this.classList.remove("green");
+		});
+
+		lis[i].addEventListener("click", function() {
+			this.classList.toggle("done");
+		});
+	}
+</script>
+</body>
+</html>

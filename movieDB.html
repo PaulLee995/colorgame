@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie DB</title>
+</head>
+<body>
+<script type="text/javascript">
+	var movies = [
+		{title: "Movie 1", rating: "5 starts", hasWatched: true},
+		{title: "Movie 2", rating: "4.5 starts", hasWatched: false},
+		{title: "Movie 3", rating: "4 starts", hasWatched: true},
+		{title: "Movie 4", rating: "3.5 starts", hasWatched: false},
+		{title: "Movie 5", rating: "5 starts", hasWatched: true}
+
+	];
+
+	for (var i = 0; i < movies.length; i++) {
+		if (movies[i].hasWatched) {
+			console.log("You have watched " + movies[i].title + " - " + movies[i].rating);
+		} else {
+			console.log("You have not seen " + movies[i].title + " - " + movies[i].rating);
+		}
+	}
+</script>
+</body>
+</html>
